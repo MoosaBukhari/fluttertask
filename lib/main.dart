@@ -93,12 +93,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       context: context,
                       builder: (BuildContext context) {
                         return SimpleDialog(
-                          title: Text('Contact number'),
+                          title: Text('Simple Dialouge'),
                           children: [
                             SimpleDialogOption(
                               onPressed: () =>
                                   Navigator.pop(context,' '),
-                              child: Text('+92 3326623300'),
+                              child: Text('Button pressed'),
                             ),
                           ],
                         );
