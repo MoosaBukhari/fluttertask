@@ -126,13 +126,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           showDialog(
                               context: context,
                               builder: (BuildContext context) {
-                                return SimpleDialog(
-                                  title: Text('Route Direction'),
-                                  children: [
-                                    SimpleDialogOption(
-                                      onPressed: () =>
-                                          Navigator.pop(context,' '),
-                                      child: Text('Tap again for the Directions'),
+                                return AlertDialog(
+                                  title: Text('Alert Dialog'),
+                                  content: Text('Route button pressed.'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(context, 'OK'),
+                                      child: Text('OK'),
                                     ),
                                   ],
                                 );
@@ -159,18 +159,29 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       IconButton(
                         onPressed: () {
-                          showDialog(
+                          showModalBottomSheet(
                               context: context,
                               builder: (BuildContext context) {
-                                return SimpleDialog(
-                                  title: Text('Share location with Friends'),
-                                  children: [
-                                    SimpleDialogOption(
-                                      onPressed: () =>
-                                          Navigator.pop(context,' '),
-                                      child: Text('Tap for more options'),
-                                    ),
-                                  ],
+                                return Container(
+                                  height: 250,
+                                  padding: const EdgeInsets.only(left: 0.0,right: 0.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text('Share Options',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      ),
+                                  SizedBox(height: 10,),
+                                  Text('Share button pressed'),
+                                  ElevatedButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: Text('OK'),
+                                  ),
+                                    ],
+                                  ),
                                 );
                               }
                           );
