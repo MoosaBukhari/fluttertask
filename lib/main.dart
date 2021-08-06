@@ -1,5 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:fluttertask1/like_button.dart';
+
 void main() {
   runApp(MyApp());
 
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -60,21 +63,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                     ],
                   ),
-                  // Row(
-                  //   children: [
-                  //     Icon(
-                  //       Icons.star_outlined,
-                  //       color: Colors.deepOrange,
-                  //     ),
-                  //     Text(
-                  //       '41',
-                  //     style: TextStyle(
-                  //       fontSize: 20,
-                  //     ),
-                  //     ),
-                  //   ],
-                  // ),
-                  LikeButtonWidget(),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.star_outlined,
+                        color: Colors.deepOrange,
+                      ),
+                      Text(
+                        '41',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
